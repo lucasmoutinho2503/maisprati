@@ -12,12 +12,10 @@ let ladoA = parseInt(prompt("Lado A: "));
 let ladoB = parseInt(prompt("Lado B: "));
 let ladoC = parseInt(prompt("Lado C: "));
 
-if(ladoA < (ladoB + ladoC) && ladoB < (ladoA + ladoC) && ladoC < (ladoA + ladoB)){
-    if((ladoA = ladoB) || (ladoA = ladoC) || (ladoB = ladoC)){
-        console.log("Triângulo Isósceles.")
-    }else if(((ladoA = ladoB) && (ladoB = ladoC))){
-        console.log("Triângulo Equilátero.");
-    }else{
-        console.log("Triângulo Escaleno.")
-    }
+if(((ladoA == ladoB) && (ladoB == ladoC) && (ladoC == ladoA))){
+    console.log("Triângulo Equilátero.");
+}else if((ladoA == ladoB) || (ladoA == ladoC) || (ladoB == ladoC)){
+    console.log("Triângulo Isósceles.");
+}else{
+    console.log("Triângulo Escaleno.")
 }
